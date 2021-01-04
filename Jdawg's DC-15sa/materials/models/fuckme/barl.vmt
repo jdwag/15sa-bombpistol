@@ -1,0 +1,20 @@
+"VertexLitGeneric" // (Shader) Detemines what parameters can be used by your material.
+{
+// Any parameters beginning with "//" will be ignored by the material. This is useful for deprecating something you may want to use later on, or revert back to, as well as for making comments like this one for organization and learning.
+
+// Base Parameters
+
+	"$basetexture" 			"models/fuckme/barl"		// (Texture) Determines which texture is used for your meshes surface. 
+	"$bumpmap" 			"models/fuckme/armor_n"		// (Texture) Determines which texture is used for fake depth and shadowing. Disables per vertex lighting for static props in all games but CS:GO.
+	$envmap "env_cubemap"
+	$envmaptint "[0.5 0.5 0.5]"
+	$envmapfresnel 1
+	$rimlight 1
+	$rimlightexponent 1
+	$rimlightboost 1
+	$rimmask 1
+	$phong  1
+	$phongboost 6
+	$phongexponent 10
+	$phongfresnelranges "[ 0.5 3 10 ]"			// (Boolean) Uses the normal maps alpha channel to determine reflectivity.
+}

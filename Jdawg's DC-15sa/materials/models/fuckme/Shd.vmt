@@ -1,0 +1,30 @@
+"VertexLitGeneric" // (Shader) Detemines what parameters can be used by your material.
+{
+// Any parameters beginning with "//" will be ignored by the material. This is useful for deprecating something you may want to use later on, or revert back to, as well as for making comments like this one for organization and learning.
+
+// Base Parameters
+
+	"$basetexture" 			"models/fuckme/Shd"		// (Texture) Determines which texture is used for your meshes surface. 
+	"$bumpmap" 			"models/fuckme/Shd_n"	
+
+	"$color2"				"[1 1 1]"				// (RGB Matrix) Determines tinting of your texture. Smaller numbers in slot 1 mean less red, in slot 2, less green, slot 3, less blue, and vice versa.
+
+	"$selfillum"			"0"				// (Boolean) Determines if your mesh glows in the dark. By default, will use your basetextures alpha channel for per texel lighting. Cannot be used with $translucent.
+	"$translucent"			"0"				// (Boolean) Determines if your mesh is transparent. By default uses your base textures alpha channel for per texel transparency. Cannot be used with $selfillum.
+	"$halflambert"			"1"				// (Boolean) Wraps lighting further around mesh to prevent definition loss. Enabled automatically if using phong shading.
+
+	"$model" 				"1"				// (Boolean) Neccessary for some parameters to function, and tells Hammer not to display this for map brush textures.
+
+// Detail Textures, adds high resolution detail over your mesh to improve upclose detail.
+
+	"$detail"  				"models\detail\brushed_metal"		// (Texture) Determines which texture is used for detailing.
+	"$detailscale" 			".5"				// (Float) Controls scale of the detail texture. Higher number means larger tiles.
+	"$detailblendfactor"  		".65"				// (Float) Controls the intensity of the detail overlay. 
+	"$detailblendmode" 		"0"				// (Integer) Determines the blend mode the overlay texture uses. Most cases use 0. Useful values are from 0 - 8.
+
+// Environment Map Reflections, adds reflections to the mesh using the envmap texture. Can cause shine issues in dark areas. For less shiny objects, it is recommended you remove this section and only use Phong Shading.
+
+	"$envmap"			"env_cubemap"			// (Texture) Determines the texture the envmap uses for reflections. Env_cubemap means it uses a maps cubemaps for accurate reflections of the surroundings.
+	"$envmaptint"			"[.7 .7 .7]"			// (RGB Matrix) Determines the intensity of each corresponding color channel for the reflections. Higher in slot 1 means more red reflections, 2 in green, 3 in blue. Equal values in all changes overall reflectivity.
+	"$normalmapalphaenvmapmask"	"0"				// (Boolean) Uses the normal maps alpha channel to determine reflectivity.
+}

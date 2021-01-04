@@ -1,0 +1,14 @@
+{
+	"title" :	"[TFA][AT] Jdawg's DC-15sa",
+	"type"  :	"weapon",
+	"tags"  :	[],
+	"ignore":
+	[
+		"*.cmd",
+		"*.ini",
+		"*.lnk",
+		"*.url",
+		"Jdawg's DC-15sa.jpg",
+		"Jdawg's DC-15sa.png"
+	]
+}

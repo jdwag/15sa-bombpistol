@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+"$baseTexture" "models/fuckme/SAsuppressor"
+	"$color2"				"[1 1 1]"				// (RGB Matrix) Determines tinting of your texture. Smaller numbers in slot 1 mean less red, in slot 2, less green, slot 3, less blue, and vice versa.
+
+	"$selfillum"			"0"				// (Boolean) Determines if your mesh glows in the dark. By default, will use your basetextures alpha channel for per texel lighting. Cannot be used with $translucent.
+	"$translucent"			"0"				// (Boolean) Determines if your mesh is transparent. By default uses your base textures alpha channel for per texel transparency. Cannot be used with $selfillum.
+	"$halflambert"			"1"				// (Boolean) Wraps lighting further around mesh to prevent definition loss. Enabled automatically if using phong shading.
+
+	"$model" 				"1"				// (Boolean) Neccessary for some parameters to function, and tells Hammer not to display this for map brush textures.
+	"$detail"  				"models\RCRemastered\Detail\corroded_metal"		// (Texture) Determines which texture is used for detailing.
+	"$detailscale" 			"8"				// (Float) Controls scale of the detail texture. Higher number means larger tiles.
+	"$detailblendfactor"  		".65"				// (Float) Controls the intensity of the detail overlay. 
+	"$detailblendmode" 		"0"				// (Integer) Determines the blend mode the overlay texture uses. Most cases use 0. Useful values are from 0 - 8.
+
+
+}
